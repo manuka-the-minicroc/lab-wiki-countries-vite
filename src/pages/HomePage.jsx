@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom"
 
 function HomePage() {
   const [countries, setCountries] = useState([]);
@@ -19,7 +20,7 @@ function HomePage() {
           {countries.map((country) => {
             return (
               <tr id="country._id">
-                <td>{country.name.common}</td>
+                <td><Link to={`/${country.alpha3Code}`}><img src={`https://flagpedia.net/data/flags/icon/72x54/${country.alpha2Code.toLowerCase()}.png`} alt="" />{country.name.common} </Link></td>
               </tr>
             );
           })}
@@ -30,3 +31,4 @@ function HomePage() {
 }
 
 export default HomePage;
+

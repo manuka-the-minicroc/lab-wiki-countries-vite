@@ -9,7 +9,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
-        <Route path="/:countryId" element={<CountryDetailsPage/>}/>
+        <Route path="/:alpha3Code" element={<CountryDetailsPage/>}/>
       </Routes>
       
       
